@@ -10,8 +10,6 @@ export function SignIn() {
 
     const { signIn, user } = useAuth();
 
-    console.log('Dados do usuário => ', user);
-
     return (
         <Center flex={1} bgColor="gray.900" p={7}>
             <Logo width={212} height={40} />
