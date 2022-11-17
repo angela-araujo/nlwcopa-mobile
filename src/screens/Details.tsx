@@ -7,6 +7,7 @@ import { api } from '../services/api';
 
 import { Header } from '../components/Header';
 import { Option } from '../components/Option';
+import { Guesses } from '../components/Guesses';
 import { Loading } from '../components/Loading';
 import { PollHeader } from '../components/PollHeader';
 import { PollCardProps } from '../components/PollCard';
@@ -83,6 +84,8 @@ export function Details() {
                                 onPress={() => setOptionSelected('ranking')}
                             />
                         </HStack>
+
+                        <Guesses pollId={pollDetails.id} />
                     </VStack> :
                     <EmptyMyPollist code={pollDetails.code} />
             }
